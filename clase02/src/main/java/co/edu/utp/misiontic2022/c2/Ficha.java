@@ -15,47 +15,47 @@ public class Ficha{
     }
 
     //Getters
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public String getColor(){
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getColor() {
         return color;
     }
 
-    public int getPosicion(){
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getPosicion() {
         return posicion;
     }
 
-    //Setters
-    public void setNombre(String nombre){
-        this.nombre = nombre;
-    }
-    public void setColor(String color){
-        this.color = color;
-    }
-    public void setPosicion(int posicion){
+    public void setPosicion(int posicion) {
         this.posicion = posicion;
-    }
+    } 
 
     //Metodos de la clase Ficha
     public String movimiento(int pInicial, int pFinal){
         return "La ficha se mueve desde la posicion " + pInicial + " hasta la posicion " + pFinal;
     }
 
-    public String movimiento(int pInicial, int pFinal, String ficha){
-        return "La ficha " + ficha + " se mueve desde la posicion " + pInicial + " hasta la posicion " + pFinal;
+    
+    public String movimiento(String ficha, int posInicial, int posFinal){
+        return "\nLa ficha (" + ficha + ") se movera desde la posicion " + posInicial + " hasta la posicion " + posFinal + "  ...";
     }
 
     public String desplazamieto(){
-        return "La ficha se esta moviendo!";
+        return "La ficha se ha movido!";
     }
 
-    public String desplazamieto(String ficha){
-        return "La ficha " + ficha + " se esta moviendo!";
-    }
-
-    
+    public String desplazamieto(String ficha, String color, int posFinal){
+        return "\n  ......La ficha (" + ficha + ") de color (" + color + ") se ha movido a la posicion " + posFinal;
+    }    
 
     // El metodo toString es un metodo de la clase Object que cuando esta dentro de la clase permite
     // que sea llamado solamente con llamar el objeto sin necesidad de llamarlo 

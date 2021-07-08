@@ -1,30 +1,49 @@
 package co.edu.utp.misiontic2022.c2;
 
+import java.util.Scanner;
+
 public class App
 {
     public static void main( String[] args )
     {
-        Ficha objFicha1 = new Ficha("caballo", "negro", 3);
-        Ficha objFicha2 = new Ficha("alfil", "blanco", 8);
-
-        objFicha1.setNombre("Reina");
-        objFicha2.setNombre("Torre");
-
-
-        System.out.println();
-        System.out.println( objFicha1 );  // NO requiere  System.out.println( objFicha.toString())
-        System.out.println();
-        System.out.println( objFicha1 );  // NO requiere  System.out.println( objFicha.toString())
-        System.out.println();
-                
-        System.out.println( objFicha1.desplazamieto() );
-        System.out.println( objFicha1.movimiento(3, 5) );
-
-        System.out.println();
+        Scanner sc = new Scanner(System.in);
         
-        System.out.println( objFicha2.desplazamieto(objFicha2.getNombre()) );
-        System.out.println( objFicha2.movimiento( 6, 2, objFicha2.getNombre() ) );
+        String ficha;
+        String color;
+        int posInicial;
+        int posFinal;
+
+        System.out.print("\nEscriba un nombre para la ficha: ");  
+        ficha = sc.nextLine();
+        System.out.print("Escriba un color para la ficha: ");  
+        color = sc.nextLine();        
+        System.out.print("Escriba la posicion Inicial de la ficha: ");        
+        posInicial = sc.nextInt();
+
+        Ficha objFicha1 = new Ficha(ficha, color, posInicial);
+        System.out.println("--------------------------------");        
+        System.out.println("Datos de la ficha: ");
+        System.out.println("--------------------------------");        
+        System.out.println( objFicha1 );  // --> objFicha1.toString()
+        System.out.println("--------------------------------");        
+
+        System.out.print("\nAhora...  Escriba la posicion hacia donde desea mover esta ficha (" + objFicha1.getNombre() + " " + objFicha1.getColor() + ") :");        
+        posFinal = sc.nextInt();        
+        System.out.println( objFicha1.movimiento(objFicha1.getNombre(), objFicha1.getPosicion(), posFinal) );
+        System.out.println( objFicha1.desplazamieto(objFicha1.getNombre(), objFicha1.getColor() , posFinal) );
+        System.out.println("--------------------------------");        
         
+        objFicha1.setPosicion(posFinal);
+        System.out.print("\nAhora...  Escriba la nueva posicion hacia donde desea mover esta ficha (" + objFicha1.getNombre() + " " + objFicha1.getColor() + ") :");        
+        posFinal = sc.nextInt();
+        System.out.println("--------------------------------");        
+        
+        System.out.println( objFicha1.movimiento(objFicha1.getNombre(), objFicha1.getPosicion(), posFinal) );
+        System.out.println( objFicha1.desplazamieto(objFicha1.getNombre(), objFicha1.getColor() , posFinal) );
+        
+
+        System.out.println();        
         System.out.println();
+        sc.close();
     }
 } 

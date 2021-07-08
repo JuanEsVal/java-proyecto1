@@ -43,14 +43,24 @@ public class Ficha{
         return "La ficha se mueve desde la posicion " + pInicial + " hasta la posicion " + pFinal;
     }
 
+    public String movimiento(int pInicial, int pFinal, String ficha){
+        return "La ficha " + ficha + " se mueve desde la posicion " + pInicial + " hasta la posicion " + pFinal;
+    }
+
     public String desplazamieto(){
         return "La ficha se esta moviendo!";
     }
+
+    public String desplazamieto(String ficha){
+        return "La ficha " + ficha + " se esta moviendo!";
+    }
+
+    
 
     // El metodo toString es un metodo de la clase Object que cuando esta dentro de la clase permite
     // que sea llamado solamente con llamar el objeto sin necesidad de llamarlo 
     // asi System.out.print(objFicha) sin ser necesario System.out.print(objFicha.toString())
     public String toString(){
-        return "Nombre " + nombre + "\nColor " + color + "\nPosicion " + posicion;
+        return "Nombre Ficha: " + nombre + "\nColor Ficha: " + color + "\nPosicion Ficha: " + posicion;
     }
 }

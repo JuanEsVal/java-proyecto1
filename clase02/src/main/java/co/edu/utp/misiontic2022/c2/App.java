@@ -6,8 +6,7 @@ public class App
 {
     public static void main( String[] args )
     {        
-        
-        
+        //Creando un Objeto de tipo Scanner para leer datos desde consola
         Scanner sc = new Scanner(System.in);
         
         //Variables para almacenar datos iniciales

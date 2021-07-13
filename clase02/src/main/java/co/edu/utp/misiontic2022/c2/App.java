@@ -28,7 +28,7 @@ public class App
         
         //Imprimiendo instancia de la ficha
         System.out.println("--------------------------------");        
-        System.out.println("Datos de la ficha: ");
+        System.out.println("Datos de la ficha:  ");
         System.out.println("--------------------------------");        
         System.out.println( objFicha1 );  // --> objFicha1.toString()
         System.out.println("--------------------------------");        

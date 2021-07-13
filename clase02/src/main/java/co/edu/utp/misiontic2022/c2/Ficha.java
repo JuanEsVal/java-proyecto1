@@ -50,7 +50,7 @@ public class Ficha{
     }
 
     public String desplazamieto(){
-        return "La ficha se ha movido!";
+        return "La ficha se ha movido! ";
     }
 
     public String desplazamieto(String ficha, String color, int posFinal){

@@ -2,6 +2,13 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"name": "clase3",
+			"path": "..\\proyecto2\\clase3"
+		},
+		{
+			"path": "..\\proyecto2"
 		}
 	],
 	"settings": {}
